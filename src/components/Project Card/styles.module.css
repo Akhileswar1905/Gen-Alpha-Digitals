@@ -1,0 +1,50 @@
+.card {
+  width: 40%;
+  height: max-content;
+  display: flex;
+  flex-direction: column;
+  background-color: #f0f0f0;
+  border-radius: 1rem;
+  overflow: hidden;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.6);
+  cursor: pointer;
+}
+
+.img > img {
+  object-fit: cover;
+}
+
+.card:nth-child(even) {
+  margin-top: 10%;
+}
+
+.desc {
+  display: flex;
+  flex-direction: column;
+  padding: 1rem;
+  gap: 1rem;
+}
+
+.desc > button {
+  background-color: var(--accent);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: none;
+  width: fit-content;
+  padding: 1rem;
+  border-radius: 50%;
+  cursor: pointer;
+  align-self: flex-end;
+  position: relative;
+}
+
+.arrow {
+  position: absolute;
+  transform: rotate(135deg);
+  width: 8px;
+  height: 8px;
+  border-left: 3px solid white;
+  border-top: 3px solid white;
+  /* background-color: red; */
+}

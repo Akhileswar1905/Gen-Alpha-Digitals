@@ -1,0 +1,88 @@
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  flex-direction: column;
+  align-items: flex-end;
+  padding: 1rem 2rem;
+  background-color: transparent;
+  position: fixed;
+  z-index: 10;
+  height: 100vh;
+  color: whitesmoke;
+  right: calc(1.25% / 2);
+}
+
+.logo {
+  font-size: 1.5rem;
+  font-weight: normal;
+  color: #fff;
+  align-self: flex-end;
+}
+
+.menu {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  justify-content: center;
+  gap: 3rem;
+}
+
+.linkBox {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+  transition: linear 0.3s;
+}
+
+.label {
+  transition: linear 0.3s;
+  display: none;
+}
+
+.label p {
+  transition: linear 0.3s;
+}
+
+.link {
+  background-color: #18a0fb10;
+  backdrop-filter: blur(0px);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0.4rem;
+  transition: linear 0.3s;
+  border: 1px solid var(--accent);
+  z-index: 1200;
+}
+
+.link > img {
+  border-radius: 50%;
+  z-index: 2;
+}
+
+.contact {
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0.4rem;
+  transition: linear 0.3s;
+}
+
+.link:hover {
+  scale: 1.15;
+}
+
+.linkBox:hover .label {
+  display: block;
+}
+
+.contact:hover {
+  scale: 1.15;
+}
+
+.contact:hover .label {
+  display: block;
+}

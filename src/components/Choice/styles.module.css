@@ -1,0 +1,18 @@
+.choice {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+  width: 30%;
+  gap: 1rem;
+  padding: 1rem;
+  border: 1px solid #ccc;
+  border-radius: 1rem;
+  transition: linear 0.3s;
+}
+
+.choice:hover {
+  box-shadow: 0px 0px 3px 0px rgba(0, 0, 0, 0.3);
+  scale: 1.05;
+}

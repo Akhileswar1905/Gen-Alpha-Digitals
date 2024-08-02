@@ -1,0 +1,31 @@
+.container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  background-color: #f0f0f0;
+}
+.wrapper {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
+
+.wrapper .section1 {
+  width: 50%;
+}
+
+.section1 h1 {
+  font-size: 1.5rem;
+  font-weight: 700;
+  margin-bottom: 1rem;
+}
+
+.section1 p {
+  font-size: 1rem;
+}
+
+.client {
+  border-radius: 30.15px;
+}

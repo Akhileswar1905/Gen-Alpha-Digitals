@@ -1,0 +1,74 @@
+.card {
+  width: 20%;
+  height: 400px;
+  background-size: cover;
+  display: flex;
+  align-items: flex-end;
+  justify-content: flex-start;
+  padding: 1rem;
+  border-radius: 30px;
+  overflow: hidden;
+  position: absolute;
+  top: 0;
+  left: 100%;
+  animation-name: move;
+  animation-duration: 30s;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+  cursor: pointer;
+}
+
+.card::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background-color: rgba(0, 0, 0, 0.3);
+  z-index: 1;
+  transition: 0.3s linear;
+}
+
+.card:hover::before {
+  background-color: rgba(0, 0, 0, 0.1);
+  scale: 1.15;
+}
+
+.content {
+  color: white;
+  width: 100%;
+  padding: 0.5rem;
+  z-index: 4;
+}
+
+.card:nth-child(1) {
+  animation-delay: calc(30s / 6 * (6 - 1) * -1);
+}
+
+.card:nth-child(2) {
+  animation-delay: calc(30s / 6 * (6 - 2) * -1);
+}
+
+.card:nth-child(3) {
+  animation-delay: calc(30s / 6 * (6 - 3) * -1);
+}
+
+.card:nth-child(4) {
+  animation-delay: calc(30s / 6 * (6 - 4) * -1);
+}
+
+.card:nth-child(5) {
+  animation-delay: calc(30s / 6 * (6 - 5) * -1);
+}
+
+.card:nth-child(6) {
+  animation-delay: calc(30s / 6 * (6 - 6) * -1);
+}
+
+/* Animation */
+@keyframes move {
+  to {
+    left: -40%;
+  }
+}
