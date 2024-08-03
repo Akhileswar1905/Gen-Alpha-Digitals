@@ -1,4 +1,4 @@
-import Footer from "../Footer/footer";
+import Footer from "../Footer/Footer";
 import styles from "./styles.module.css";
 const Contact = () => {
   return (
