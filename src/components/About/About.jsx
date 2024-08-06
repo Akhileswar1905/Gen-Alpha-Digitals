@@ -1,14 +1,41 @@
+"use client";
 import Image from "next/image";
 import styles from "./styles.module.css";
-
+import { motion, useScroll, useTransform } from "framer-motion";
+import { useRef } from "react";
 const About = () => {
+  const ref = useRef(null);
+  const { scrollYProgress } = useScroll({
+    target: ref,
+    offset: ["start end", "end end"],
+  });
+
+  const translateY = useTransform(scrollYProgress, [0, 1], [125, 0]);
+  const scale = useTransform(scrollYProgress, [0, 1], [0.8, 1]);
+  const opacity = useTransform(scrollYProgress, [0, 1], [0.6, 1]);
   return (
     <div className={styles.container}>
       <small className={styles.heading}>
         Explore Our Dynamic Digital Solutions
       </small>
-      <div className={styles.services}>
-        <div className={styles.service}>
+      <div
+        className={styles.services}
+        ref={ref}
+        style={{
+          scale,
+          opacity,
+          translateY,
+        }}
+      >
+        <motion.div
+          className={styles.service}
+          ref={ref}
+          style={{
+            scale: scrollYProgress,
+            opacity: scrollYProgress,
+            translateY,
+          }}
+        >
           <Image
             src={"/services/service1.png"}
             width={50}
@@ -21,9 +48,16 @@ const About = () => {
             identities with memorable visuals that align with your vision, from
             logos to complete brand ecosystems.
           </small>
-          <button>Learn More</button>
-        </div>
-        <div className={styles.service}>
+          <button className={styles.btn}>Learn More</button>
+        </motion.div>
+        <motion.div
+          className={styles.service}
+          ref={ref}
+          style={{
+            scale: scrollYProgress,
+            opacity: scrollYProgress,
+          }}
+        >
           <Image
             src={"/services/service2.png"}
             width={50}
@@ -36,9 +70,16 @@ const About = () => {
             that stands out and tells your brand&apos;s story, leaving a lasting
             impression on customers.
           </small>
-          <button>Learn More</button>
-        </div>
-        <div className={styles.service}>
+          <button className={styles.btn}>Learn More</button>
+        </motion.div>
+        <motion.div
+          className={styles.service}
+          ref={ref}
+          style={{
+            scale: scrollYProgress,
+            opacity: scrollYProgress,
+          }}
+        >
           <Image
             src={"/services/service3.png"}
             width={50}
@@ -51,9 +92,16 @@ const About = () => {
             and enhance user experiences, leveraging the latest trends for
             robust and scalable systems.
           </small>
-          <button>Learn More</button>
-        </div>
-        <div className={styles.service}>
+          <button className={styles.btn}>Learn More</button>
+        </motion.div>
+        <motion.div
+          className={styles.service}
+          ref={ref}
+          style={{
+            scale: scrollYProgress,
+            opacity: scrollYProgress,
+          }}
+        >
           <Image
             src={"/services/service4.png"}
             width={50}
@@ -66,8 +114,8 @@ const About = () => {
             storytelling with strategic campaigns to maximize your brand&apos;s
             reach and impact across multiple platforms.
           </small>
-          <button>Learn More</button>
-        </div>
+          <button className={styles.btn}>Learn More</button>
+        </motion.div>
       </div>
     </div>
   );

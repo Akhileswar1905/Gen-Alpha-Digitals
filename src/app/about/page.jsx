@@ -1,12 +1,17 @@
+"use client";
 import Image from "next/image";
 import styles from "./page.module.css";
 import Brands from "@/components/Brands/Brands";
 import Card from "@/components/Team Card/Card";
 import Contact from "@/components/Contact/Contact";
-const page = () => {
+import useIntersectionObserver from "@/hooks/useIntersectionObserver";
+
+const Page = () => {
+  useIntersectionObserver();
+
   return (
     <div className={styles.container}>
-      <div className={styles.hero}>
+      <div className={`${styles.hero} fade-in`}>
         <h1>
           Welcome To
           <br /> <span>Gen Alpha Digital</span>
@@ -14,7 +19,7 @@ const page = () => {
       </div>
 
       {/* Section 1 */}
-      <div className={styles.section1}>
+      <div className={`${styles.section1} fade-in`}>
         <div className={styles.div1}>
           <h3>About Us</h3>
           <p>
@@ -39,7 +44,7 @@ const page = () => {
             alt=""
             width={300}
             height={300}
-            className={styles.img}
+            className={`${styles.img} fade-in`}
           />
         </div>
       </div>
@@ -48,16 +53,16 @@ const page = () => {
       <Brands />
 
       {/* Our Team */}
-      <div className={styles.team}>
+      <div className={`${styles.team} fade-in`}>
         <p className={styles.heading}>Meet Our Team</p>
         {/* Cards */}
         <div className={styles.cards}>
-          <Card name={"Person"} img={"/ppl/person1.jpg"} role={"Developer"} />
-          <Card name={"Person"} img={"/ppl/person2.jpg"} role={"Developer"} />
-          <Card name={"Person"} img={"/ppl/person3.jpg"} role={"Developer"} />
-          <Card name={"Person"} img={"/ppl/person4.jpg"} role={"Developer"} />
-          <Card name={"Person"} img={"/ppl/person5.jpg"} role={"Developer"} />
-          <Card name={"Person"} img={"/ppl/person6.jpg"} role={"Developer"} />
+          <Card name="Person" img="/ppl/person1.jpg" role="Developer" />
+          <Card name="Person" img="/ppl/person2.jpg" role="Developer" />
+          <Card name="Person" img="/ppl/person3.jpg" role="Developer" />
+          <Card name="Person" img="/ppl/person4.jpg" role="Developer" />
+          <Card name="Person" img="/ppl/person5.jpg" role="Developer" />
+          <Card name="Person" img="/ppl/person6.jpg" role="Developer" />
         </div>
       </div>
 
@@ -66,4 +71,4 @@ const page = () => {
   );
 };
 
-export default page;
+export default Page;
