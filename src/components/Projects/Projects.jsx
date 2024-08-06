@@ -27,13 +27,17 @@ const Projects = () => {
     <div className={styles.container}>
       <h1>See Our Works</h1>
       <Swiper
+        className="swiper_container"
+        // style={{
+        //   border: "5px solid black",
+        // }}
         effect={"coverflow"}
         grabCursor={true}
         centeredSlides={true}
         loop={true}
         slidesPerView={"auto"}
         autoplay={{
-          delay: 2500,
+          delay: 25000,
           disableOnInteraction: false,
         }}
         coverflowEffect={{
@@ -49,11 +53,16 @@ const Projects = () => {
           clickable: true,
         }}
         modules={[EffectCoverflow, Pagination, Navigation, Autoplay]}
-        className="swiper_container"
       >
         {images.map((img, i) => (
-          <SwiperSlide key={i}>
-            <Image src={img} alt={`slide_image_${i}`} fill className="img" />
+          <SwiperSlide className="slide" key={i}>
+            <Image
+              src={img}
+              alt={`slide_image_${i}`}
+              width={100}
+              height={100}
+              className="img"
+            />
           </SwiperSlide>
         ))}
 

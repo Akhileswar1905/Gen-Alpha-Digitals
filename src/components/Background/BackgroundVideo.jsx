@@ -11,7 +11,7 @@ const BackgroundVideo = () => {
           Digital World
         </h4>
         <div className={styles.btns}>
-          <button>Get Started</button>
+          <button>Get In Touch</button>
           <button>Learn More</button>
         </div>
       </div>

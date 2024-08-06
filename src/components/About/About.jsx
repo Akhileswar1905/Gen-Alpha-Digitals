@@ -10,32 +10,15 @@ const About = () => {
     offset: ["start end", "end end"],
   });
 
-  const translateY = useTransform(scrollYProgress, [0, 1], [125, 0]);
-  const scale = useTransform(scrollYProgress, [0, 1], [0.8, 1]);
-  const opacity = useTransform(scrollYProgress, [0, 1], [0.6, 1]);
+  const translateY = useTransform(scrollYProgress, [0, 1], [100, 0]);
+  const translateY2 = useTransform(scrollYProgress, [0, 1], [120, 0]);
   return (
     <div className={styles.container}>
       <small className={styles.heading}>
         Explore Our Dynamic Digital Solutions
       </small>
-      <div
-        className={styles.services}
-        ref={ref}
-        style={{
-          scale,
-          opacity,
-          translateY,
-        }}
-      >
-        <motion.div
-          className={styles.service}
-          ref={ref}
-          style={{
-            scale: scrollYProgress,
-            opacity: scrollYProgress,
-            translateY,
-          }}
-        >
+      <div className={styles.services}>
+        <motion.div className={styles.service} ref={ref} style={{ translateY }}>
           <Image
             src={"/services/service1.png"}
             width={50}
@@ -50,14 +33,7 @@ const About = () => {
           </small>
           <button className={styles.btn}>Learn More</button>
         </motion.div>
-        <motion.div
-          className={styles.service}
-          ref={ref}
-          style={{
-            scale: scrollYProgress,
-            opacity: scrollYProgress,
-          }}
-        >
+        <motion.div className={styles.service} ref={ref} style={{ translateY }}>
           <Image
             src={"/services/service2.png"}
             width={50}
@@ -75,10 +51,7 @@ const About = () => {
         <motion.div
           className={styles.service}
           ref={ref}
-          style={{
-            scale: scrollYProgress,
-            opacity: scrollYProgress,
-          }}
+          style={{ translateY: translateY2 }}
         >
           <Image
             src={"/services/service3.png"}
@@ -97,10 +70,7 @@ const About = () => {
         <motion.div
           className={styles.service}
           ref={ref}
-          style={{
-            scale: scrollYProgress,
-            opacity: scrollYProgress,
-          }}
+          style={{ translateY: translateY2 }}
         >
           <Image
             src={"/services/service4.png"}

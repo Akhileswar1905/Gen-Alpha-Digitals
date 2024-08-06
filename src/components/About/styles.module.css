@@ -75,3 +75,26 @@
 .btn:hover::before {
   height: 175%;
 }
+
+/* Media Queries */
+@media screen and (max-width: 768px) {
+  .container {
+    height: auto;
+    /* border: 5px solid black; */
+  }
+  .heading {
+    padding: 1rem;
+    font-size: 1.5rem;
+  }
+
+  .services {
+    flex-direction: column;
+    gap: 1rem;
+    align-items: center;
+  }
+
+  .service {
+    width: 80%;
+    height: max-content;
+  }
+}

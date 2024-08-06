@@ -29,3 +29,15 @@
 .client {
   border-radius: 30.15px;
 }
+
+/* Media Queries */
+@media screen and (max-width: 768px) {
+  .wrapper {
+    flex-direction: column-reverse;
+    gap: 1rem;
+  }
+
+  .wrapper .section1 {
+    width: 86%;
+  }
+}
