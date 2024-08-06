@@ -1,14 +1,10 @@
-"use client";
 import Image from "next/image";
 import styles from "./page.module.css";
 import Brands from "@/components/Brands/Brands";
 import Card from "@/components/Team Card/Card";
 import Contact from "@/components/Contact/Contact";
-import useIntersectionObserver from "@/hooks/useIntersectionObserver";
 
 const Page = () => {
-  useIntersectionObserver();
-
   return (
     <div className={styles.container}>
       <div className={`${styles.hero} fade-in`}>

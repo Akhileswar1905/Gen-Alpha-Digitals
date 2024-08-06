@@ -33,3 +33,11 @@
 .bottom p {
   font-size: 12px;
 }
+
+/* Media Queries */
+@media (max-width: 1024px) {
+  .container {
+    height: auto;
+    padding: 4rem 0;
+  }
+}

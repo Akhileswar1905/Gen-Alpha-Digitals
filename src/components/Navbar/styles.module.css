@@ -10,6 +10,7 @@
   height: 100vh;
   color: var(--accent);
   right: calc(1.25% / 2);
+  animation: fadeIn 1.4s ease-in-out;
 }
 
 .logo {
@@ -85,4 +86,16 @@
 
 .contact:hover .label {
   display: block;
+}
+
+/* Keyframes */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateX(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
 }

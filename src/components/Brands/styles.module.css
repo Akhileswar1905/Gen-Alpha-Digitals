@@ -6,6 +6,7 @@
   flex-wrap: wrap;
   margin-top: 20px;
   height: 100vh;
+  padding: 2rem;
 }
 
 .container h1 {
@@ -77,5 +78,16 @@
 @keyframes move {
   to {
     left: -100px;
+  }
+}
+
+/* Media Queries */
+@media (max-width: 1024px) {
+  .container {
+    height: auto;
+    margin: 4rem 0;
+  }
+  .brands {
+    width: 100%;
   }
 }
