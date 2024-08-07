@@ -32,6 +32,9 @@
 
 /* Media Queries */
 @media screen and (max-width: 768px) {
+  .container {
+    height: auto;
+  }
   .wrapper {
     flex-direction: column-reverse;
     gap: 1rem;
