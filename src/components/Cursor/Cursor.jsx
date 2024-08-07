@@ -2,7 +2,15 @@
 import { useEffect, useRef } from "react";
 import styles from "./styles.module.css";
 import gsap from "gsap";
+import { CSSPlugin } from "gsap/CSSPlugin";
+
+// Register the CSSPlugin
+gsap.registerPlugin(CSSPlugin);
+
 const Cursor = () => {
+  const cursor = useRef(null);
+  const followerCursor = useRef(null);
+
   const moveCursor = (e) => {
     gsap.to(cursor.current, {
       duration: 0.5,
@@ -16,19 +24,22 @@ const Cursor = () => {
     });
   };
 
-  const cursor = useRef(null);
-  const followerCursor = useRef(null);
   useEffect(() => {
-    gsap.set(cursor, {
+    gsap.set(cursor.current, {
       xPercent: 100,
       yPercent: 100,
     });
-    gsap.set(followerCursor, {
+    gsap.set(followerCursor.current, {
       xPercent: -20,
       yPercent: -20,
     });
     window.addEventListener("mousemove", moveCursor);
+
+    return () => {
+      window.removeEventListener("mousemove", moveCursor);
+    };
   }, []);
+
   return (
     <div className={styles.main}>
       <div ref={cursor} className={styles.cursor}></div>

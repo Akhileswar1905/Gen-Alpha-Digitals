@@ -84,6 +84,7 @@
   }
   .heading {
     padding: 1rem;
+    margin: 1rem 0;
     font-size: 1.5rem;
   }
 
@@ -94,7 +95,7 @@
   }
 
   .service {
-    width: 80%;
+    width: 90%;
     height: max-content;
   }
 }

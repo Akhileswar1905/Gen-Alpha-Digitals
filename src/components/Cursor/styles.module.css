@@ -25,3 +25,10 @@
   pointer-events: none;
   transition: all 0.1s ease;
 }
+
+/* Media Queries */
+@media screen and (max-width: 768px) {
+  .main {
+    display: none;
+  }
+}
