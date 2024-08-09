@@ -2,7 +2,7 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  height: 80vh;
+  height: 100vh;
 }
 .wrapper {
   width: 80%;
@@ -32,9 +32,6 @@
 
 /* Media Queries */
 @media screen and (max-width: 768px) {
-  .container {
-    height: auto;
-  }
   .wrapper {
     flex-direction: column-reverse;
     gap: 1rem;

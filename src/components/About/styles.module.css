@@ -9,7 +9,7 @@
   padding: 4rem;
   padding-bottom: 0;
   font-size: 2rem;
-  width: 50rem;
+  /* width: 50rem; */
   color: #000;
   margin-top: 3rem;
   margin-bottom: 3rem;
@@ -80,12 +80,11 @@
 @media screen and (max-width: 768px) {
   .container {
     height: auto;
-    /* border: 5px solid black; */
   }
   .heading {
-    padding: 1rem;
+    padding: 2rem;
     margin: 1rem 0;
-    font-size: 1.5rem;
+    font-size: 2rem;
   }
 
   .services {
@@ -97,5 +96,16 @@
   .service {
     width: 90%;
     height: max-content;
+  }
+}
+
+@media screen and (max-width: 425px) {
+  .heading {
+    padding: 1rem;
+    font-size: 1.5rem;
+  }
+
+  .service {
+    padding: 2rem;
   }
 }

@@ -10,15 +10,21 @@ const About = () => {
     offset: ["start end", "end end"],
   });
 
-  const translateY = useTransform(scrollYProgress, [0, 1], [100, 0]);
-  const translateY2 = useTransform(scrollYProgress, [0, 1], [120, 0]);
+  const translateY = useTransform(scrollYProgress, [0, 1], [125, 0]);
+  const translateY2 = useTransform(scrollYProgress, [0, 1], [145, 0]);
+  const scale = useTransform(scrollYProgress, [0, 1], [0.8, 1]);
+
   return (
     <div className={styles.container}>
       <small className={styles.heading}>
         Explore Our Dynamic Digital Solutions
       </small>
       <div className={styles.services}>
-        <motion.div className={styles.service} ref={ref} style={{ translateY }}>
+        <motion.div
+          className={styles.service}
+          ref={ref}
+          style={{ translateY, scale }}
+        >
           <Image
             src={"/services/service1.png"}
             width={50}
@@ -33,7 +39,11 @@ const About = () => {
           </small>
           <button className={styles.btn}>Learn More</button>
         </motion.div>
-        <motion.div className={styles.service} ref={ref} style={{ translateY }}>
+        <motion.div
+          className={styles.service}
+          ref={ref}
+          style={{ translateY, scale }}
+        >
           <Image
             src={"/services/service2.png"}
             width={50}
@@ -51,7 +61,7 @@ const About = () => {
         <motion.div
           className={styles.service}
           ref={ref}
-          style={{ translateY: translateY2 }}
+          style={{ translateY: translateY2, scale }}
         >
           <Image
             src={"/services/service3.png"}
@@ -70,7 +80,7 @@ const About = () => {
         <motion.div
           className={styles.service}
           ref={ref}
-          style={{ translateY: translateY2 }}
+          style={{ translateY: translateY2, scale }}
         >
           <Image
             src={"/services/service4.png"}
