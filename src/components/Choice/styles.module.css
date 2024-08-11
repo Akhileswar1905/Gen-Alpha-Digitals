@@ -16,3 +16,15 @@
   box-shadow: 0px 0px 3px 0px rgba(0, 0, 0, 0.3);
   scale: 1.05;
 }
+
+/* Media Queries */
+@media (max-width: 768px) {
+  .choice {
+    width: 45%;
+  }
+}
+@media (max-width: 475px) {
+  .choice {
+    width: 90%;
+  }
+}

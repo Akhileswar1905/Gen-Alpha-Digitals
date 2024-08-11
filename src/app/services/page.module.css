@@ -17,7 +17,6 @@
   background-color: #f0f0f0;
   width: 100%;
   border: 1px solid #ccc;
-  height: 100vh;
   padding: 1rem;
   text-align: center;
   display: flex;
@@ -76,9 +75,17 @@
   align-items: center;
   justify-content: center;
   gap: 1rem;
+  padding: 2rem;
 }
 
 .service > button:hover {
   background-color: var(--accent);
   color: #fff;
+}
+
+/* Media Queries */
+@media (max-width: 768px) {
+  .service {
+    width: 100%;
+  }
 }
