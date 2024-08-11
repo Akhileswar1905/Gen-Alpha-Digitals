@@ -82,6 +82,7 @@
 
 .contact:hover {
   scale: 1.15;
+  animation: rotate infinite linear 2s;
 }
 
 .contact:hover .label {
@@ -97,5 +98,14 @@
   to {
     opacity: 1;
     transform: translateX(0);
+  }
+}
+
+@keyframes rotate {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
   }
 }

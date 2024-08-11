@@ -3,8 +3,8 @@
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  height: 100vh;
-  background-color: #f0f0f0;
+  width: 100%;
+  flex-wrap: wrap;
 }
 
 .container h1 {
@@ -14,13 +14,28 @@
   margin: 1rem 0;
 }
 
-.img {
-  width: 100%;
-  height: auto;
+.container > div {
+  width: 80%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 2rem;
+  flex-wrap: wrap;
+}
+
+.btn {
+  margin: 3rem;
+  padding: 0.5rem 1rem;
+  border: none;
+  border-radius: 5px;
+  background-color: var(--accent);
+  color: #fff;
+  font-size: 1rem;
+  cursor: pointer;
 }
 
 /* Media Query */
-@media (min-width: 768px) {
+@media (max-width: 768px) {
   .container {
     flex-direction: row;
     flex-wrap: wrap;

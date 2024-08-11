@@ -28,3 +28,17 @@
   font-weight: 400;
   margin-bottom: 2rem;
 }
+
+/* Media Queries */
+@media (max-width: 768px) {
+  .cards {
+    width: 100%;
+  }
+}
+@media (max-width: 475px) {
+  .cards {
+    width: 100%;
+    flex-direction: column;
+    flex-wrap: nowrap;
+  }
+}

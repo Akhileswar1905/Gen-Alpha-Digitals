@@ -53,12 +53,50 @@ const Page = () => {
         <p className={styles.heading}>Meet Our Team</p>
         {/* Cards */}
         <div className={styles.cards}>
-          <Card name="Person" img="/ppl/person1.jpg" role="Developer" />
-          <Card name="Person" img="/ppl/person2.jpg" role="Developer" />
-          <Card name="Person" img="/ppl/person3.jpg" role="Developer" />
-          <Card name="Person" img="/ppl/person4.jpg" role="Developer" />
-          <Card name="Person" img="/ppl/person5.jpg" role="Developer" />
-          <Card name="Person" img="/ppl/person6.jpg" role="Developer" />
+          <div className={styles.cardSlide}>
+            <Image
+              className="img"
+              alt=""
+              src={"/ppl/person1.jpg"}
+              width={1080}
+              height={920}
+            />
+            <Image
+              className="img"
+              alt=""
+              src={"/ppl/person2.jpg"}
+              width={1080}
+              height={920}
+            />
+            <Image
+              className="img"
+              alt=""
+              src={"/ppl/person3.jpg"}
+              width={1080}
+              height={920}
+            />
+            <Image
+              className="img"
+              alt=""
+              src={"/ppl/person4.jpg"}
+              width={1080}
+              height={920}
+            />
+            <Image
+              className="img"
+              alt=""
+              src={"/ppl/person5.jpg"}
+              width={1080}
+              height={920}
+            />
+            <Image
+              className="img"
+              alt=""
+              src={"/ppl/person6.jpg"}
+              width={1080}
+              height={920}
+            />
+          </div>
         </div>
       </div>
 

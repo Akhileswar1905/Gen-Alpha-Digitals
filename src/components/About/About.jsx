@@ -1,29 +1,34 @@
 "use client";
 import Image from "next/image";
 import styles from "./styles.module.css";
-import { motion, useScroll, useTransform } from "framer-motion";
-import { useRef } from "react";
+import { delay, motion } from "framer-motion";
+
+const contain = (delay) => ({
+  hidden: { opacity: 0, x: "-100%" },
+  visible: { opacity: 1, x: 0, transition: { delay: delay, duration: 0.8 } },
+});
+
 const About = () => {
-  const ref = useRef(null);
-  const { scrollYProgress } = useScroll({
-    target: ref,
-    offset: ["start end", "end end"],
-  });
-
-  const translateY = useTransform(scrollYProgress, [0, 1], [125, 0]);
-  const translateY2 = useTransform(scrollYProgress, [0, 1], [145, 0]);
-  const scale = useTransform(scrollYProgress, [0, 1], [0.8, 1]);
-
   return (
     <div className={styles.container}>
       <small className={styles.heading}>
-        Explore Our Dynamic Digital Solutions
+        Explore Our <br />
+        <i
+          style={{
+            color: "var(--accent)",
+            fontWeight: 500,
+          }}
+        >
+          Dynamic
+        </i>{" "}
+        Digital Solutions
       </small>
       <div className={styles.services}>
         <motion.div
+          variants={contain(0)}
+          initial="hidden"
+          whileInView="visible"
           className={styles.service}
-          ref={ref}
-          style={{ translateY, scale }}
         >
           <Image
             src={"/services/service1.png"}
@@ -40,9 +45,10 @@ const About = () => {
           <button className={styles.btn}>Learn More</button>
         </motion.div>
         <motion.div
+          variants={contain(0.1)}
+          initial="hidden"
+          whileInView="visible"
           className={styles.service}
-          ref={ref}
-          style={{ translateY, scale }}
         >
           <Image
             src={"/services/service2.png"}
@@ -59,9 +65,10 @@ const About = () => {
           <button className={styles.btn}>Learn More</button>
         </motion.div>
         <motion.div
+          variants={contain(0)}
+          initial="hidden"
+          whileInView="visible"
           className={styles.service}
-          ref={ref}
-          style={{ translateY: translateY2, scale }}
         >
           <Image
             src={"/services/service3.png"}
@@ -78,9 +85,10 @@ const About = () => {
           <button className={styles.btn}>Learn More</button>
         </motion.div>
         <motion.div
+          variants={contain(0.1)}
+          initial="hidden"
+          whileInView="visible"
           className={styles.service}
-          ref={ref}
-          style={{ translateY: translateY2, scale }}
         >
           <Image
             src={"/services/service4.png"}

@@ -1,9 +1,10 @@
-import styles from "./styles.module.css";
-import Image from "next/image";
-import Contact from "@/components/Contact/Contact";
 import Card from "@/components/Project Card/Card";
+import styles from "./styles.module.css";
+import Contact from "@/components/Contact/Contact";
 
 const Projects = () => {
+  const projects = Array.from({ length: 6 }, (_, i) => i + 1);
+
   return (
     <>
       <div className={styles.container}>
@@ -12,21 +13,14 @@ const Projects = () => {
           <p className={styles.heading}>Our Works</p>
         </div>
         <div className={styles.cards}>
-          <Card
-            name={"Project 1"}
-            img={"/projects/project1.jpg"}
-            desc={"Description of project 1"}
-          />
-          <Card
-            name={"Project 2"}
-            img={"/projects/project2.jpg"}
-            desc={"Description of project 2"}
-          />
-          <Card
-            name={"Project 3"}
-            img={"/projects/project3.jpg"}
-            desc={"Description of project 3"}
-          />
+          {projects.map((i) => (
+            <Card
+              key={i}
+              img={`/projects/project${i}.jpg`}
+              name={`Project ${i}`}
+              desc={`This is project ${i}`}
+            />
+          ))}
         </div>
       </div>
       <Contact />

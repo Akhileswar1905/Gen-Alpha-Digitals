@@ -1,14 +1,29 @@
+"use client";
 import Image from "next/image";
 import styles from "./styles.module.css";
+import { motion } from "framer-motion";
 
+const contain = (delay) => ({
+  hidden: { opacity: 0, x: -100 },
+  visible: {
+    opacity: 1,
+    x: 0,
+    transition: {
+      delay: delay,
+      duration: 0.6,
+    },
+  },
+});
 const Brands = () => {
   return (
     <div className={styles.container}>
-      <h1>Brands In Collaboration With Us</h1>
-      <p>
+      <motion.h1 variants={contain(0)} initial="hidden" whileInView="visible">
+        Brands In Collaboration With Us
+      </motion.h1>
+      <motion.p variants={contain(0.1)} initial="hidden" whileInView="visible">
         Partnering with top brands, we collaborate to bring innovative and
         impactful solutions to market.
-      </p>
+      </motion.p>
 
       <div className={styles.brands}>
         <div className={styles.brand}>

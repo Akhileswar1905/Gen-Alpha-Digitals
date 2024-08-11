@@ -86,11 +86,11 @@
 
 @media (max-width: 768px) {
   .card {
-    width: 22%;
+    /* width: 22%; */
     /* height: 50%; */
-    /* border: 2px solid black; */
     border-radius: 10px;
-    animation-duration: 10s;
+    animation-duration: 20s;
+    padding-right: 2rem;
   }
 
   .content h5 {
@@ -102,26 +102,26 @@
   }
 
   .card:nth-child(1) {
-    animation-delay: calc(10s / 6 * (6 - 1) * -1);
+    animation-delay: calc(20s / 6 * (6 - 1) * -1);
   }
 
   .card:nth-child(2) {
-    animation-delay: calc(10s / 6 * (6 - 2) * -1);
+    animation-delay: calc(20s / 6 * (6 - 2) * -1);
   }
 
   .card:nth-child(3) {
-    animation-delay: calc(10s / 6 * (6 - 3) * -1);
+    animation-delay: calc(20s / 6 * (6 - 3) * -1);
   }
 
   .card:nth-child(4) {
-    animation-delay: calc(10s / 6 * (6 - 4) * -1);
+    animation-delay: calc(20s / 6 * (6 - 4) * -1);
   }
 
   .card:nth-child(5) {
-    animation-delay: calc(10s / 6 * (6 - 5) * -1);
+    animation-delay: calc(20s / 6 * (6 - 5) * -1);
   }
 
   .card:nth-child(6) {
-    animation-delay: calc(10s / 6 * (6 - 6) * -1);
+    animation-delay: calc(20s / 6 * (6 - 6) * -1);
   }
 }

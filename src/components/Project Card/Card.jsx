@@ -1,8 +1,8 @@
-"use client";
 import Image from "next/image";
 import styles from "./styles.module.css";
-import { motion, useScroll, useTransform } from "framer-motion";
+import { useScroll, useTransform } from "framer-motion";
 import { useRef } from "react";
+import { MotionDiv } from "../motionComponents/motionComponents";
 const Card = ({ name, img, desc }) => {
   const ref = useRef(null);
   const { scrollYProgress } = useScroll({
@@ -15,7 +15,7 @@ const Card = ({ name, img, desc }) => {
 
   return (
     <>
-      <motion.div
+      <MotionDiv
         className={styles.card}
         ref={ref}
         style={{ translateY, scale }}
@@ -30,7 +30,7 @@ const Card = ({ name, img, desc }) => {
             <div className={styles.arrow}></div>
           </button>
         </div>
-      </motion.div>
+      </MotionDiv>
     </>
   );
 };

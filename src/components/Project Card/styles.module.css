@@ -48,3 +48,10 @@
   border-top: 3px solid white;
   /* background-color: red; */
 }
+
+/* Media Queries */
+@media (max-width: 475px) {
+  .card {
+    width: 85%;
+  }
+}
