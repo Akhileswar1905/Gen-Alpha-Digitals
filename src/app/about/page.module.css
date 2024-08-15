@@ -107,6 +107,11 @@
   margin: 0 10px;
 }
 
+.div1 h3 .letter {
+  font-size: 2rem;
+  /* color: #18a0fb !important; */
+}
+
 /* Animations for services */
 @keyframes fadeIn {
   from {

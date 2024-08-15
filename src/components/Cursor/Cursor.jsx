@@ -26,12 +26,12 @@ const Cursor = () => {
 
   useEffect(() => {
     gsap.set(cursor.current, {
-      xPercent: 100,
-      yPercent: 100,
+      xPercent: -50,
+      yPercent: -50,
     });
     gsap.set(followerCursor.current, {
-      xPercent: -20,
-      yPercent: -20,
+      xPercent: -50,
+      yPercent: -50,
     });
     window.addEventListener("mousemove", moveCursor);
 

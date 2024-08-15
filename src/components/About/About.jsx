@@ -1,35 +1,141 @@
-"use client";
 import Image from "next/image";
 import styles from "./styles.module.css";
-import { delay, motion } from "framer-motion";
+import {
+  MotionDiv,
+  MotionH3,
+  MotionPTag,
+  MotionSmall,
+  MotionSpan,
+} from "../motionComponents/motionComponents";
+import Service from "../Service/Service";
 
-const contain = (delay) => ({
-  hidden: { opacity: 0, x: "-100%" },
-  visible: { opacity: 1, x: 0, transition: { delay: delay, duration: 0.8 } },
-});
+const banner = {
+  animate: {
+    transition: {
+      delayChildren: 0.4,
+      staggerChildren: 0.1,
+    },
+  },
+};
+
+const imgAni = {
+  initial: { y: 100, opacity: 0 },
+  animate: {
+    y: 0,
+    opacity: 1,
+    transition: {
+      duration: 1,
+    },
+  },
+};
+
+const showUp = {
+  initial: { y: 100, opacity: 0 },
+  visible: {
+    y: 0,
+    opacity: 1,
+    transition: {
+      duration: 0.5,
+    },
+  },
+};
 
 const About = () => {
   return (
-    <div className={styles.container}>
-      <small className={styles.heading}>
-        Explore Our <br />
+    <MotionDiv variants={banner} className={styles.container}>
+      <div className={styles.section1}>
+        <MotionDiv
+          className={styles.div1}
+          variants={banner}
+          initial="initial"
+          animate="animate"
+        >
+          <MotionH3 variants={showUp} initial="initial" whileInView="visible">
+            {"About Us".split("").map((letter, index) => (
+              <MotionSpan
+                key={index}
+                variants={showUp}
+                initial="initial"
+                whileInView={"visible"}
+              >
+                {letter}
+              </MotionSpan>
+            ))}
+          </MotionH3>
+          <MotionPTag variants={showUp} initial="initial" whileInView="visible">
+            Gen Alpha Digitals is your go-to partner for innovative digital
+            marketing solutions. We specialize in branding and design, offering
+            services such as graphic and logo design, UX design, and product
+            packaging. Our tech team excels in web and app development, AR and
+            VR solutions, UX/UI design, and SAP platform development, ensuring
+            your business is equipped with cutting-edge technology. <br />
+          </MotionPTag>
+          <MotionPTag variants={showUp} initial="initial" whileInView="visible">
+            We also provide comprehensive advertising and marketing services,
+            including affiliate marketing, social media marketing, programmatic
+            advertising, content marketing, and email and WhatsApp marketing.
+            Whether you&apos;re a business or a startup, Gen Alpha Digitals is
+            here to help you grow and succeed in the digital landscape.
+          </MotionPTag>
+        </MotionDiv>
+
+        <MotionDiv variants={imgAni} initial="initial" whileInView="animate">
+          <Image
+            src="/about.jpg"
+            alt=""
+            width={300}
+            height={300}
+            className={`${styles.img} fade-in`}
+          />
+        </MotionDiv>
+      </div>
+      <MotionSmall
+        className={styles.heading}
+        variants={showUp}
+        initial="initial"
+        whileInView="visible"
+      >
+        {"Explore Our".split("").map((letter, index) => (
+          <MotionSpan
+            key={index}
+            variants={showUp}
+            initial="initial"
+            whileInView="visible"
+          >
+            {letter}
+          </MotionSpan>
+        ))}{" "}
+        <br />
         <i
           style={{
             color: "var(--accent)",
             fontWeight: 500,
           }}
         >
-          Dynamic
+          {"Dynamic".split("").map((letter, index) => (
+            <MotionSpan
+              key={index}
+              variants={showUp}
+              initial="initial"
+              whileInView="visible"
+            >
+              {letter}
+            </MotionSpan>
+          ))}
         </i>{" "}
-        Digital Solutions
-      </small>
-      <div className={styles.services}>
-        <motion.div
-          variants={contain(0)}
-          initial="hidden"
-          whileInView="visible"
-          className={styles.service}
-        >
+        {"Digital Solutions".split("").map((letter, index) => (
+          <MotionSpan
+            key={index}
+            variants={showUp}
+            initial="initial"
+            whileInView="visible"
+          >
+            {letter}
+          </MotionSpan>
+        ))}
+      </MotionSmall>
+      {/* <div className={styles.services}>
+        <MotionDiv className={styles.service}>
           <Image
             src={"/services/service1.png"}
             width={50}
@@ -43,13 +149,8 @@ const About = () => {
             logos to complete brand ecosystems.
           </small>
           <button className={styles.btn}>Learn More</button>
-        </motion.div>
-        <motion.div
-          variants={contain(0.1)}
-          initial="hidden"
-          whileInView="visible"
-          className={styles.service}
-        >
+        </MotionDiv>
+        <MotionDiv className={styles.service}>
           <Image
             src={"/services/service2.png"}
             width={50}
@@ -63,13 +164,8 @@ const About = () => {
             impression on customers.
           </small>
           <button className={styles.btn}>Learn More</button>
-        </motion.div>
-        <motion.div
-          variants={contain(0)}
-          initial="hidden"
-          whileInView="visible"
-          className={styles.service}
-        >
+        </MotionDiv>
+        <MotionDiv className={styles.service}>
           <Image
             src={"/services/service3.png"}
             width={50}
@@ -83,13 +179,8 @@ const About = () => {
             robust and scalable systems.
           </small>
           <button className={styles.btn}>Learn More</button>
-        </motion.div>
-        <motion.div
-          variants={contain(0.1)}
-          initial="hidden"
-          whileInView="visible"
-          className={styles.service}
-        >
+        </MotionDiv>
+        <MotionDiv className={styles.service}>
           <Image
             src={"/services/service4.png"}
             width={50}
@@ -103,9 +194,11 @@ const About = () => {
             reach and impact across multiple platforms.
           </small>
           <button className={styles.btn}>Learn More</button>
-        </motion.div>
-      </div>
-    </div>
+        </MotionDiv>
+      </div> */}
+
+      <Service />
+    </MotionDiv>
   );
 };
 

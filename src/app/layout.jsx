@@ -2,6 +2,7 @@ import { Montserrat } from "next/font/google";
 import "./globals.css";
 import Navbar from "@/components/Navbar/Navbar";
 import Cursor from "@/components/Cursor/Cursor";
+import SmoothScrolling from "./SmoothScrolling";
 
 const montserrat = Montserrat({ subsets: ["latin"] });
 
@@ -16,7 +17,7 @@ export default function RootLayout({ children }) {
       <body className={montserrat.className}>
         <Cursor />
         <Navbar />
-        {children}
+        <SmoothScrolling>{children}</SmoothScrolling>
       </body>
     </html>
   );

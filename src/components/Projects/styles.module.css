@@ -47,25 +47,12 @@
     font-size: 3rem;
   }
 
-  .swiper_container {
+  .container > div {
     width: 100%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-wrap: wrap;
   }
 
-  .slide {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 1rem;
-    margin: 1rem;
-    width: 30%;
-  }
-
-  .img {
+  .wrapper {
     width: 100%;
-    margin: 1rem;
+    padding: 1rem;
   }
 }

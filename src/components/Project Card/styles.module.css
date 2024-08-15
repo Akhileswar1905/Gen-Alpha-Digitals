@@ -52,6 +52,6 @@
 /* Media Queries */
 @media (max-width: 475px) {
   .card {
-    width: 85%;
+    width: 100%;
   }
 }

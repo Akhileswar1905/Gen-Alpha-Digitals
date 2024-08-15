@@ -14,9 +14,16 @@ const contain = (delay) => ({
     },
   },
 });
-const Brands = () => {
+const Brands = ({ bg }) => {
   return (
-    <div className={styles.container}>
+    <div
+      className={styles.container}
+      style={{
+        backgroundColor: bg ? bg.backgroundColor : "#fff",
+        borderTopLeftRadius: bg ? "50px" : "",
+        borderTopRightRadius: bg ? "50px" : "",
+      }}
+    >
       <motion.h1 variants={contain(0)} initial="hidden" whileInView="visible">
         Brands In Collaboration With Us
       </motion.h1>
