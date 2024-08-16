@@ -1,0 +1,40 @@
+.container {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+}
+.img1Container > img {
+  width: 102px;
+  object-fit: cover;
+  border-bottom: 2px solid black;
+}
+
+.img2Container > img {
+  width: 100px;
+}
+
+.img1Container > img {
+  z-index: 100;
+  background-color: white;
+}
+
+.img2Container {
+  position: absolute;
+  z-index: -1;
+  top: 50%;
+}
+
+.img2Container > img {
+  animation: spin 5s linear infinite;
+}
+
+@keyframes spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
