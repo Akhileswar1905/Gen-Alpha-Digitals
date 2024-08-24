@@ -17,6 +17,7 @@
   font-size: 2rem;
   background-color: black;
   color: white;
+  position: relative;
 }
 
 .hero::before {
@@ -53,6 +54,11 @@
   background-color: #f0f0f0;
 }
 
+.svgSection {
+  height: 300vh;
+  position: relative;
+}
+
 .div1 {
   width: 50%;
   display: flex;
@@ -87,9 +93,6 @@
   font-size: 400;
   font-size: 2.5rem;
   margin-bottom: 3rem;
-  animation: fadeIn ease-in-out;
-  animation-timeline: view();
-  animation-range: entry 0% cover 40%;
 }
 
 .cards {
@@ -110,6 +113,10 @@
 .div1 h3 .letter {
   font-size: 2rem;
   /* color: #18a0fb !important; */
+}
+
+.cardsSection {
+  margin-top: 20px;
 }
 
 /* Animations for services */

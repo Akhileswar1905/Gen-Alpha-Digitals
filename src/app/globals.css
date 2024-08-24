@@ -238,3 +238,38 @@ h6 {
     width: 80% !important;
   }
 }
+
+.curve,
+.svg1 {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  /* height: 100vh; */
+  z-index: 100;
+}
+.svg2 {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  width: 100vw;
+  /* height: 100vh; */
+  z-index: 100;
+}
+.svg3 {
+  position: absolute;
+  top: 200%;
+  left: 0;
+  width: 100vw;
+  /* height: 100vh; */
+  z-index: 100;
+}
+
+.underlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  /* height: 100vh; */
+  z-index: 90;
+}
