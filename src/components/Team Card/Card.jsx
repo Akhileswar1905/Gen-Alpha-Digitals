@@ -5,7 +5,7 @@ const Card = ({ name, img, role }) => {
   return (
     <div className={styles.card}>
       <div className={styles.img}>
-        <Image src={img} alt="" width={100} height={100} />
+        <Image src={img} alt="" width={350} height={500} />
       </div>
       <div className={styles.content}>
         <h5>{name}</h5>

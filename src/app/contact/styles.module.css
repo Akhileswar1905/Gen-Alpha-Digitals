@@ -1,0 +1,330 @@
+.intro {
+  width: 50%;
+  height: 45vh;
+  margin-top: 10%;
+  margin-left: 8%;
+}
+
+.para1 {
+  font-size: 90px;
+  margin: 0;
+  line-height: 1.2;
+  opacity: 0.5;
+  transform: translateY(100px);
+  animation: reveal-open 1s linear forwards;
+}
+
+@keyframes reveal-open {
+  from {
+    opacity: 0.3;
+    transform: translateY(100px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0px);
+  }
+}
+
+.interests {
+  width: 45%;
+  height: 50vh;
+  margin-left: 8%;
+}
+
+.para2 {
+  font-weight: lighter;
+  font-size: 40px;
+  margin: 0;
+}
+
+.wrapper {
+  width: 100%;
+  height: 60vh;
+  display: flex;
+  flex-wrap: nowrap;
+}
+
+.btns {
+  width: 72%;
+  height: 50vh;
+  gap: 1rem;
+  display: flex;
+  flex-wrap: wrap;
+  padding-left: 10px;
+}
+
+.btn {
+  font-size: 20px;
+  font-weight: bold;
+  border-radius: 40%;
+  padding: 12px;
+  background-color: white;
+}
+
+.btn:hover {
+  color: white;
+  background-color: black;
+  cursor: pointer;
+}
+
+.input {
+  width: 40%;
+  height: 50vh;
+  /* margin-left: 3%; */
+  padding-left: 8px;
+  padding-top: 10px;
+  margin-top: 65px;
+}
+
+.field {
+  width: 100%;
+  font-size: 30px;
+  font-weight: 10;
+  padding: 10px 0px 0px 10px;
+  box-sizing: border-box;
+  margin: 5px 0;
+  border: none;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.3);
+  /* border-color: white; */
+  outline: none;
+}
+
+.field::placeholder {
+  font-size: 20px;
+}
+
+.field:hover {
+  border-bottom: 2px solid black;
+}
+
+.submit {
+  font-size: 20px;
+  border-radius: 12px;
+  padding: 10px;
+  background-color: white;
+  margin-top: 15px;
+  margin-left: 15px;
+  border-color: 2px solid black;
+  border-width: 3px;
+}
+
+.submit:hover {
+  font-size: 20px;
+  margin-top: 12px;
+  margin-left: 12px;
+  color: white;
+  cursor: pointer;
+  background-color: black;
+}
+
+.image {
+  width: 100%;
+  height: 60vh;
+  position: relative;
+  margin-top: 30px;
+}
+
+.city {
+  width: 100%;
+  height: 60vh;
+  object-fit: cover;
+}
+
+.heading {
+  font-size: 70px;
+  color: white;
+  text-align: center;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.details {
+  width: 90%;
+  height: 40vh;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  gap: 2rem;
+  margin-left: 5%;
+}
+
+.line {
+  width: 29%;
+  padding: 1rem;
+  height: 30vh;
+  border-radius: 10%;
+}
+
+.address {
+  width: 29%;
+  padding: 1rem;
+  height: 30vh;
+  border-radius: 10%;
+}
+
+.mail {
+  width: 29%;
+  padding: 1rem;
+  height: 30vh;
+  border-radius: 10%;
+}
+
+.hours {
+  width: 30%;
+  padding: 1rem;
+  height: 30vh;
+  border-radius: 30px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin-left: 34%;
+  border: 2px solid black;
+}
+
+.followus {
+  width: 29%;
+  padding: 1rem;
+  height: 30vh;
+  border-radius: 10%;
+  background-color: #d9d9d9;
+}
+
+.mail span {
+  font-size: 20px;
+  color: hsl(0 0% 0% / 0.2);
+  background-clip: text;
+  background-repeat: no-repeat;
+  background-size: 0% 100%;
+  background-image: linear-gradient(90deg, black, black);
+  animation: scroll-reveal linear forwards;
+  animation-timeline: view();
+}
+
+.mail .pa span {
+  animation-range-start: contain 10vh;
+  animation-range-end: contain 20vh;
+}
+
+.mail .mails span {
+  animation-range-start: contain 12.5vh;
+  animation-range-end: contain 45vh;
+}
+
+.details span {
+  font-size: 20px;
+  color: hsl(0 0% 0% / 0.2);
+  background-clip: text;
+  background-repeat: no-repeat;
+  background-size: 0% 100%;
+  background-image: linear-gradient(90deg, black, black);
+  animation: scroll-reveal linear forwards;
+  animation-timeline: view();
+}
+
+.details .pa span {
+  animation-range-start: contain 10vh;
+  animation-range-end: contain 20vh;
+}
+
+.details .num span {
+  animation-range-start: contain 12.5vh;
+  animation-range-end: contain 45vh;
+}
+
+.address span {
+  font-size: 20px;
+  color: hsl(0 0% 0% / 0.2);
+  background-clip: text;
+  background-repeat: no-repeat;
+  background-size: 0% 100%;
+  background-image: linear-gradient(90deg, black, black);
+  animation: scroll-reveal linear forwards;
+  animation-timeline: view();
+}
+
+.address .pa span {
+  animation-range-start: contain 10vh;
+  animation-range-end: contain 20vh;
+}
+
+.address .add span {
+  animation-range-start: contain 12.5vh;
+  animation-range-end: contain 45vh;
+}
+
+.hours span {
+  font-size: 20px;
+  color: hsl(0 0% 0% / 0.2);
+  background-clip: text;
+  background-repeat: no-repeat;
+  background-size: 0% 100%;
+  background-image: linear-gradient(90deg, black, black);
+  animation: scroll-reveal linear forwards;
+  animation-timeline: view();
+}
+
+.hours .days span {
+  animation-range-start: contain 12.5vh;
+  animation-range-end: contain 45vh;
+}
+
+@keyframes scroll-reveal {
+  to {
+    background-size: 100% 100%;
+  }
+}
+
+.hours .pa {
+  font-style: italic;
+  font-size: 25px;
+}
+
+.mail .pa {
+  font-style: italic;
+  font-size: 25px;
+}
+
+.address .pa {
+  font-style: italic;
+  font-size: 25px;
+}
+
+.line .pa {
+  font-style: italic;
+  font-size: 25px;
+}
+
+.num {
+  line-height: 1;
+  font-size: 20px;
+  padding-left: 20px;
+}
+
+.add {
+  padding-left: 20px;
+  font-size: 20px;
+}
+
+.mails {
+  padding-left: 20px;
+  font-size: 20px;
+}
+
+.days {
+  padding-left: 20px;
+  font-size: 20px;
+}
+
+.marq {
+  direction: left;
+}
+
+.footer {
+  width: 80%;
+  height: 80vh;
+  background-color: red;
+}
