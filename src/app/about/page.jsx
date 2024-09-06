@@ -1,12 +1,31 @@
 "use client";
 
-import { MotionDiv } from "@/components/motionComponents/motionComponents";
+import {
+  MotionDiv,
+  MotionH2,
+  MotionPTag,
+} from "@/components/motionComponents/motionComponents";
 import styles from "./page.module.css";
 import { useEffect, useState } from "react";
 import Image from "next/image";
 import Contact from "@/components/Contact/Contact";
+import AnimatedTextWord from "./variants";
 
 const Page = () => {
+  const contain = {
+    hidden: {
+      opacity: 0,
+      y: 100,
+    },
+    visible: {
+      opacity: 1,
+      y: 0,
+      transition: {
+        duration: 0.8,
+      },
+    },
+  };
+
   const animate = (ini, fin) => ({
     hidden: {
       opacity: 0.5,
@@ -30,7 +49,7 @@ const Page = () => {
 
     const handleScroll = () => {
       const scrollValue = window.scrollY;
-      const totalDistance = 2700;
+      const totalDistance = 3645;
       const scrollPercent = scrollValue / totalDistance;
       const currentPoint = scrollPercent * pathLength;
       path.style.strokeDashoffset = (pathLength - currentPoint) * 1.5;
@@ -72,7 +91,26 @@ const Page = () => {
     <>
       <div className={styles.container}>
         <div className={styles.hero}>
-          <h1 className={styles.title}>About</h1>
+          <h1 className={styles.title}>
+            <AnimatedTextWord
+              text={"Redefining routine with data-driven creativity and"}
+            />
+            <i>
+              <AnimatedTextWord
+                text={"relentless innovation"}
+                textStyles={`"fontSize": "3.5rem", "color":"blue"`}
+              />
+            </i>
+          </h1>
+        </div>
+        <div className={styles.heroImg}>
+          <Image
+            src={"/about/hero.png"}
+            alt=""
+            width={1280}
+            height={768}
+            objectFit="cover"
+          />
         </div>
         <div className={styles.content}>
           <div className={`${styles.svgSection}`}>
@@ -111,27 +149,170 @@ const Page = () => {
             initial="hidden"
             whileInView="visible"
             className={`${styles.box} ${styles.box1}`}
-          ></MotionDiv>
+          >
+            <div
+              style={{
+                display: "flex",
+                flexDirection: "column",
+                justifyContent: "center",
+                height: "100%",
+                gap: "1rem",
+              }}
+            >
+              <h6>Year 2021</h6>
+              <h5>Focus on Digital Marketing Clients</h5>
+              <p>
+                We started our journey by focusing on digital marketing clients,
+                building a strong foundation in this sector.
+              </p>
+            </div>
+          </MotionDiv>
           <MotionDiv
             variants={animate("100%", "13%")}
             initial="hidden"
             whileInView="visible"
             className={`${styles.box} ${styles.box2}`}
-          ></MotionDiv>
+          >
+            <div
+              style={{
+                display: "flex",
+                flexDirection: "column",
+                justifyContent: "center",
+                height: "100%",
+                gap: "1rem",
+              }}
+            >
+              <h6>Year 2022</h6>
+              <h5>Delivered Our First Tech Project</h5>
+              <p>
+                In 2022, we successfully delivered our first tech project,
+                expanding our expertise and service offerings.
+              </p>
+            </div>
+          </MotionDiv>
           <MotionDiv
             variants={animate("0%", "70.5%")}
             initial="hidden"
             whileInView="visible"
             className={`${styles.box} ${styles.box3}`}
-          ></MotionDiv>
+          >
+            <div
+              style={{
+                display: "flex",
+                flexDirection: "column",
+                justifyContent: "center",
+                height: "100%",
+                gap: "1rem",
+              }}
+            >
+              <h6>Year 2023</h6>
+              <h5>Registered as a Google &amp; Amazon Partnered Agency</h5>
+              <p>
+                In 2023, we achieved a significant milestone by becoming a
+                Google and Amazon Partnered agency, expanding our services to
+                Sports, Fashion &amp; E-commerce, and Real Estate sectors.{" "}
+              </p>
+            </div>
+          </MotionDiv>
           <MotionDiv
             variants={animate("100%", "13%")}
             initial="hidden"
             whileInView="visible"
             className={`${styles.box} ${styles.box4}`}
-          ></MotionDiv>
+          >
+            <div
+              style={{
+                display: "flex",
+                flexDirection: "column",
+                justifyContent: "center",
+                height: "100%",
+                gap: "1rem",
+              }}
+            >
+              <h6>December 2023</h6>
+              <h5>Delivered Our First AR/VR Project</h5>
+              <p>
+                Delivered our first AR/VR project for an Interior Designer,
+                showcasing our innovation in immersive technology.
+              </p>
+            </div>
+          </MotionDiv>
         </div>
       </div>
+
+      {/* Mission, Vision and Why work with us */}
+      <div className={styles.mainDiv}>
+        {/* Mission and Vision*/}
+        <div className={styles.missionVision}>
+          <div className={styles.mission}>
+            <MotionH2
+              variants={contain}
+              initial="hidden"
+              whileInView={"visible"}
+              className={styles.mission__title}
+            >
+              Our <i>Mission</i>
+            </MotionH2>
+            <MotionPTag
+              variants={contain}
+              initial="hidden"
+              whileInView={"visible"}
+            >
+              Our mission is to bring brands and people together through
+              thoughtful, data-driven marketing that truly resonates. We’re
+              passionate about fueling our client&#39;s growth and success, and
+              we do it by blending creativity with a deep commitment to
+              delivering real results.{" "}
+            </MotionPTag>
+          </div>
+          <div className={styles.vision}>
+            <MotionH2
+              variants={contain}
+              initial="hidden"
+              whileInView={"visible"}
+              className={styles.vision__title}
+            >
+              Our <i>Vision</i>
+            </MotionH2>
+            <MotionPTag
+              variants={contain}
+              initial="hidden"
+              whileInView={"visible"}
+            >
+              Our vision is to redefine marketing’s future by crafting
+              innovative campaigns that spark growth, connect with people on a
+              deeper level, and create lasting impressions in the market. We aim
+              to foster a work environment that accepts the exceptional as
+              usual.
+            </MotionPTag>
+          </div>
+        </div>
+
+        {/* Why work with us */}
+        <MotionDiv className={styles.whyWork}>
+          <MotionH2
+            variants={contain}
+            initial="hidden"
+            whileInView={"visible"}
+            className={styles.whyWork__title}
+          >
+            Why Work With <i>Us?</i>
+          </MotionH2>
+          <MotionPTag
+            variants={contain}
+            initial="hidden"
+            whileInView={"visible"}
+          >
+            At Gen Alpha, we’re all about endless growth and nonstop learning.
+            Dive into game-changing projects that push boundaries and flip the
+            script on the usual. Our workplace? Think of it as a creative
+            playground where every day is a new adventure. We keep it fun,
+            fresh, and free of egos—because here, it’s all about collaboration,
+            innovation, and a dash of boldness to keep things exciting..
+          </MotionPTag>
+        </MotionDiv>
+      </div>
+
       {/* Team Section */}
       <div className={styles.team}>
         <h2 className={styles.team__title}>Meet the Team</h2>
