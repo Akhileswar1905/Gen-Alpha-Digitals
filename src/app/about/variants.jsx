@@ -41,7 +41,7 @@ const AnimatedTextWord = ({ text, fontSize }) => {
       style={{ overflow: "hidden", display: "flex", fontSize: "3rem" }}
       variants={container}
       initial="hidden"
-      animate="visible"
+      whileInView="visible"
     >
       {words.map((word, index) => (
         <MotionSpan
