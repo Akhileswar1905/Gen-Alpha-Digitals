@@ -1,10 +1,10 @@
-import React from "react";
+"use client";
 import {
   MotionDiv,
   MotionSpan,
 } from "@/components/motionComponents/motionComponents";
 
-const AnimatedTextWord = ({ text, textStyles }) => {
+const AnimatedTextWord = ({ text, fontSize }) => {
   const words = text.split(" ");
 
   const container = {
@@ -38,7 +38,7 @@ const AnimatedTextWord = ({ text, textStyles }) => {
 
   return (
     <MotionDiv
-      style={{ overflow: "hidden", display: "flex", fontSize: "2rem" }}
+      style={{ overflow: "hidden", display: "flex", fontSize: "3rem" }}
       variants={container}
       initial="hidden"
       animate="visible"
@@ -46,7 +46,10 @@ const AnimatedTextWord = ({ text, textStyles }) => {
       {words.map((word, index) => (
         <MotionSpan
           variants={child}
-          style={{ marginRight: "10px", fontSize: "3rem", textStyles }}
+          style={{
+            marginRight: "10px",
+            fontSize: fontSize ? fontSize : "3rem",
+          }}
           key={index}
         >
           {word}

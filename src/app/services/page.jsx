@@ -4,65 +4,160 @@ import Testimonial from "@/components/Testimonial1/Testimonial1";
 import Testimonial2 from "@/components/Testimonial2/Testimonial2";
 import Contact from "@/components/Contact/Contact";
 import Image from "next/image";
+import {
+  MotionButton,
+  MotionPTag,
+  MotionSmall,
+} from "@/components/motionComponents/motionComponents";
+import AnimatedTextWord from "../about/variants";
+
+const varient = (delay) => ({
+  hidden: {
+    opacity: 0,
+
+    y: 50,
+  },
+  visible: {
+    opacity: 1,
+    y: 0,
+
+    transition: {
+      delay: delay,
+      duration: 0.75,
+    },
+  },
+});
 
 const page = () => {
   return (
     <div className={styles.container}>
       <div className={styles.wrapper}>
         <div className={styles.wrap}>
-          <small>Our Services</small>
-          <p className={styles.heading}>What are we good at?</p>
+          <AnimatedTextWord text={"Our"} fontSize={"5rem"} />
+          <i>
+            <AnimatedTextWord text={"Services"} fontSize={"5rem"} />
+          </i>
         </div>
       </div>
+
+      {/* Services */}
       <div className={styles.services}>
         <div className={styles.service}>
-          <Image src={"/services/service1.png"} alt="" width={50} height={50} />
-          <h5>Product Branding and Designing</h5>
-          <p>
+          <div className={styles.line}></div>
+          <MotionSmall
+            variants={varient(0)}
+            initial="hidden"
+            whileInView="visible"
+          >
+            Product Branding and Designing
+          </MotionSmall>
+          <MotionPTag
+            variants={varient(0.1)}
+            initial="hidden"
+            whileInView="visible"
+          >
             Blending creativity and strategy, we create compelling brand
             identities with memorable visuals that align with your vision, from
             logos to complete brand ecosystems.
-          </p>
-          <button>Learn More</button>
+          </MotionPTag>
+          <MotionButton
+            variants={varient(0.2)}
+            initial="hidden"
+            whileInView="visible"
+          >
+            Learn More
+          </MotionButton>
         </div>
         <div className={styles.service}>
-          <Image src={"/services/service2.png"} alt="" width={50} height={50} />
-          <h5>Product Packaging</h5>
-          <p>
+          <div className={styles.line}></div>
+          <MotionSmall
+            variants={varient(0)}
+            initial="hidden"
+            whileInView="visible"
+          >
+            Product Packaging
+          </MotionSmall>
+          <MotionPTag
+            variants={varient(0.1)}
+            initial="hidden"
+            whileInView="visible"
+          >
             Enhance product presentation with functional, sustainable packaging
             that stands out and tells your brand&apos;s story, leaving a lasting
             impression on customers.
-          </p>
-          <button>Learn More</button>
+          </MotionPTag>
+          <MotionButton
+            variants={varient(0.2)}
+            initial="hidden"
+            whileInView="visible"
+          >
+            Learn More
+          </MotionButton>
         </div>
         <div className={styles.service}>
-          <Image src={"/services/service3.png"} alt="" width={50} height={50} />
-          <h5>Technology and Development</h5>
-          <p>
+          <div className={styles.line}></div>
+          <MotionSmall
+            variants={varient(0)}
+            initial="hidden"
+            whileInView="visible"
+          >
+            Technology and Development
+          </MotionSmall>
+          <MotionPTag
+            variants={varient(0.1)}
+            initial="hidden"
+            whileInView="visible"
+          >
             We develop cutting-edge tech solutions that streamline operations
             and enhance user experiences, leveraging the latest trends for
             robust and scalable systems.
-          </p>
-          <button>Learn More</button>
+          </MotionPTag>
+          <MotionButton
+            variants={varient(0.2)}
+            initial="hidden"
+            whileInView="visible"
+          >
+            Learn More
+          </MotionButton>
         </div>
         <div className={styles.service}>
-          <Image src={"/services/service4.png"} alt="" width={50} height={50} />
-          <h5>Advertisment and Marketing</h5>
-          <p>
+          <div className={styles.line}></div>
+          <MotionSmall
+            variants={varient(0)}
+            initial="hidden"
+            whileInView="visible"
+          >
+            Advertisment and Marketing
+          </MotionSmall>
+          <MotionPTag
+            variants={varient(0.1)}
+            initial="hidden"
+            whileInView="visible"
+          >
             Our data-driven advertising and marketing services combine creative
             storytelling with strategic campaigns to maximize your brand&apos;s
             reach and impact across multiple platforms.
-          </p>
-          <button>Learn More</button>
+          </MotionPTag>
+          <MotionButton
+            variants={varient(0.2)}
+            initial="hidden"
+            whileInView="visible"
+          >
+            Learn More
+          </MotionButton>
         </div>
       </div>
 
       {/* Choices */}
-
       <div className={styles.section2}>
-        <small>Why Choose Us</small>
-        <p className={styles.heading}>Why we are your best choice?</p>
+        <div className={styles.heading}>
+          <AnimatedTextWord text={"Why are we your "} fontSize={"5rem"} />
+          <i>
+            <AnimatedTextWord text={"Best Choice?"} fontSize={"5rem"} />
+          </i>
+        </div>
         <div className={styles.choices}>
+          <div className={styles.line}></div>
           <Choice
             img={"/icons/icon1.png"}
             title={"Proven Track Record"}
@@ -70,6 +165,7 @@ const page = () => {
               "We have built a reputation as a trusted and reliable partner in achieving business success."
             }
           />
+          <div className={styles.line}></div>
           <Choice
             img={"/icons/icon2.png"}
             title={"Tailored Solutions"}
@@ -77,6 +173,7 @@ const page = () => {
               "We offer personalized solutions tailored to your specific goals, audience, and industry."
             }
           />
+          <div className={styles.line}></div>
           <Choice
             img={"/icons/icon3.png"}
             title={"Client-Centric Focus"}
@@ -84,6 +181,7 @@ const page = () => {
               "Your success is our priority. We prioritize understanding your business goals."
             }
           />
+          <div className={styles.line}></div>
           <Choice
             img={"/icons/icon4.png"}
             title={"Transparent Communication"}
@@ -91,6 +189,7 @@ const page = () => {
               "We believe in open and honest communication every step of the way."
             }
           />
+          <div className={styles.line}></div>
           <Choice
             img={"/icons/icon5.png"}
             title={"Dedicated Support"}
@@ -98,6 +197,7 @@ const page = () => {
               "Your success is our priority, and we're here to support you every step of the way."
             }
           />
+          <div className={styles.line}></div>
           <Choice
             img={"/icons/icon6.png"}
             title={"Expertise Across Industries"}
@@ -107,6 +207,7 @@ const page = () => {
           />
         </div>
       </div>
+
       <Testimonial />
       <Testimonial2 />
       <Contact />

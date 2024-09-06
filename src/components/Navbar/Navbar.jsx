@@ -40,12 +40,6 @@ const navLinks = [
     imgSrc: "/navbar/projects.png",
     delay: 0.3,
   },
-  {
-    label: "Case Studies",
-    href: "/case-studies",
-    imgSrc: "/navbar/blog.png",
-    delay: 0.4,
-  },
 ];
 
 const Navbar = () => {
