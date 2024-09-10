@@ -6,6 +6,7 @@ import Contact from "@/components/Contact/Contact";
 import Image from "next/image";
 import {
   MotionButton,
+  MotionDiv,
   MotionPTag,
   MotionSmall,
 } from "@/components/motionComponents/motionComponents";
@@ -28,6 +29,18 @@ const varient = (delay) => ({
   },
 });
 
+const lineVar = {
+  hidden: {
+    width: 0,
+  },
+  visible: {
+    width: "100%",
+    transition: {
+      duration: 1.75,
+    },
+  },
+};
+
 const page = () => {
   return (
     <div className={styles.container}>
@@ -43,7 +56,12 @@ const page = () => {
       {/* Services */}
       <div className={styles.services}>
         <div className={styles.service}>
-          <div className={styles.line}></div>
+          <MotionDiv
+            variants={lineVar}
+            initial="hidden"
+            whileInView="visible"
+            className={styles.line}
+          ></MotionDiv>
           <MotionSmall
             variants={varient(0)}
             initial="hidden"
@@ -69,7 +87,12 @@ const page = () => {
           </MotionButton>
         </div>
         <div className={styles.service}>
-          <div className={styles.line}></div>
+          <MotionDiv
+            variants={lineVar}
+            initial="hidden"
+            whileInView="visible"
+            className={styles.line}
+          ></MotionDiv>
           <MotionSmall
             variants={varient(0)}
             initial="hidden"
@@ -95,7 +118,12 @@ const page = () => {
           </MotionButton>
         </div>
         <div className={styles.service}>
-          <div className={styles.line}></div>
+          <MotionDiv
+            variants={lineVar}
+            initial="hidden"
+            whileInView="visible"
+            className={styles.line}
+          ></MotionDiv>
           <MotionSmall
             variants={varient(0)}
             initial="hidden"
@@ -121,7 +149,12 @@ const page = () => {
           </MotionButton>
         </div>
         <div className={styles.service}>
-          <div className={styles.line}></div>
+          <MotionDiv
+            variants={lineVar}
+            initial="hidden"
+            whileInView="visible"
+            className={styles.line}
+          ></MotionDiv>
           <MotionSmall
             variants={varient(0)}
             initial="hidden"
@@ -157,7 +190,12 @@ const page = () => {
           </i>
         </div>
         <div className={styles.choices}>
-          <div className={styles.line}></div>
+          <MotionDiv
+            variants={lineVar}
+            initial="hidden"
+            whileInView="visible"
+            className={styles.line}
+          ></MotionDiv>
           <Choice
             img={"/icons/icon1.png"}
             title={"Proven Track Record"}
@@ -165,7 +203,12 @@ const page = () => {
               "We have built a reputation as a trusted and reliable partner in achieving business success."
             }
           />
-          <div className={styles.line}></div>
+          <MotionDiv
+            variants={lineVar}
+            initial="hidden"
+            whileInView="visible"
+            className={styles.line}
+          ></MotionDiv>
           <Choice
             img={"/icons/icon2.png"}
             title={"Tailored Solutions"}
@@ -173,7 +216,12 @@ const page = () => {
               "We offer personalized solutions tailored to your specific goals, audience, and industry."
             }
           />
-          <div className={styles.line}></div>
+          <MotionDiv
+            variants={lineVar}
+            initial="hidden"
+            whileInView="visible"
+            className={styles.line}
+          ></MotionDiv>
           <Choice
             img={"/icons/icon3.png"}
             title={"Client-Centric Focus"}
@@ -181,7 +229,12 @@ const page = () => {
               "Your success is our priority. We prioritize understanding your business goals."
             }
           />
-          <div className={styles.line}></div>
+          <MotionDiv
+            variants={lineVar}
+            initial="hidden"
+            whileInView="visible"
+            className={styles.line}
+          ></MotionDiv>
           <Choice
             img={"/icons/icon4.png"}
             title={"Transparent Communication"}
@@ -189,7 +242,12 @@ const page = () => {
               "We believe in open and honest communication every step of the way."
             }
           />
-          <div className={styles.line}></div>
+          <MotionDiv
+            variants={lineVar}
+            initial="hidden"
+            whileInView="visible"
+            className={styles.line}
+          ></MotionDiv>
           <Choice
             img={"/icons/icon5.png"}
             title={"Dedicated Support"}
@@ -197,7 +255,12 @@ const page = () => {
               "Your success is our priority, and we're here to support you every step of the way."
             }
           />
-          <div className={styles.line}></div>
+          <MotionDiv
+            variants={lineVar}
+            initial="hidden"
+            whileInView="visible"
+            className={styles.line}
+          ></MotionDiv>
           <Choice
             img={"/icons/icon6.png"}
             title={"Expertise Across Industries"}
