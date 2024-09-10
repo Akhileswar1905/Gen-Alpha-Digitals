@@ -47,7 +47,14 @@ const Navbar = () => {
     <div className={styles.navbar}>
       {/* Logo */}
       <div className={styles.logo}>
-        <Link href={"/"}>Logo</Link>
+        <Link href={"/"}>
+          <Image
+            src={"/logo/svg/logo-no-background.svg"}
+            alt="Logo"
+            width={250}
+            height={100}
+          />
+        </Link>
       </div>
 
       {/* Menu */}
